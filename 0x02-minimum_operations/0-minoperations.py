@@ -18,7 +18,6 @@ def minOperations(n):
             n /= i
         else:
             i += 1
-        print("i: {}, n: {}, result: {}".format(i, n, result))
     return result
 
     # This has some edge case bugs
