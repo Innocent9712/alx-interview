@@ -8,19 +8,20 @@ def minOperations(n):
     Calculates the fewest number of operations needed to
     result in exactly n H characters in the file
     """
-    if n <= 1:
-        return 0
-    i = 2
-    result = 0
-    while i <= n:
-        if n % i == 0:
-            result += i
-            n /= i
-        else:
-            i += 1
-    return result
+    # Solution 1: has some edge cases bugs
+    # if n <= 1:
+    #     return 0
+    # i = 2
+    # result = 0
+    # while i <= n:
+    #     if n % i == 0:
+    #         result += i
+    #         n /= i
+    #     else:
+    #         i += 1
+    # return result
 
-    # This has some edge case bugs
+    # Solution 2: has some edge case bugs
 
     # if n <= 1:
     #     return 0
@@ -44,3 +45,13 @@ def minOperations(n):
     #         op = 'cp'
     #     num_of_ops += 1
     # return num_of_ops
+
+    # Solution 3: has some edge case bugs
+    operations = 0
+    min_operations = 2
+    while n > 1:
+        while n % min_operations == 0:
+            operations += min_operations
+            n /= min_operations
+        min_operations += 1
+    return operations
