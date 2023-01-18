@@ -29,6 +29,7 @@ def validate_ip(s):
 
 
 def display_all_logs(signum=None, frame=None):
+    """Function to display logs"""
     print(f"File size: {total_file_size}")
     myKeys = list(list_of_log_data.keys())
     myKeys.sort()
