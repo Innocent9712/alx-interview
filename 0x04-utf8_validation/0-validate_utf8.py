@@ -10,6 +10,8 @@ def validUTF8(data):
     """a method that determines if a given data
     set represents a valid UTF-8 encoding.
     """
+    if len(data) == 0:
+        return False
     datapoints = decimalToBinary(data)
     i = 0
     while i < len(datapoints):
