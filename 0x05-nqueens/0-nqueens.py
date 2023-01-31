@@ -5,7 +5,7 @@ import sys
 
 args = sys.argv
 
-if len(args) > 2:
+if len(args) != 2:
     print("Usage: nqueens N")
     exit(1)
 
